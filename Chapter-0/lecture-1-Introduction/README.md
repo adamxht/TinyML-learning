@@ -1,6 +1,7 @@
 # Lecture 1: Introduction
 
 Slides: https://www.dropbox.com/scl/fi/h3ggav4eopxsitqxzf6t2/Lec01-Introduction.pdf?rlkey=hzbpsha72p5e3ed4mdvcgcda5&e=1&st=pz5u977e&dl=0
+Video: https://www.youtube.com/watch?v=U7EPZv8Kh9w&feature=youtu.be
 
 Model size grows every year at a much faster rate than GPU memory:
 ![alt text](images/image.png)
