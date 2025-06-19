@@ -46,13 +46,15 @@ Larger models have more room for reduction:
 
 Visualization of Pruning results:
 ![alt text](Images/image-13.png)
-- Even with 90& pruning, the model accuracy does not regrade, however the threshold is 95%.
+- Even with 90% pruning, the model accuracy does not degrade, however the threshold is 95%.
 
 Publication history of pruning:
+
 ![alt text](Images/image-14.png)
 
 Industry adoption of Pruning:
 Hardware that supports sparse matrix multiplication can save compute for sparse networks because anything multiplied by 0 is 0, we can ignore them. This requires specialized hardware that has sparse matrix kernels.
+
 ![alt text](Images/image-15.png)
 ![alt text](Images/image-16.png)
 
@@ -69,19 +71,22 @@ Pruning can be performed at different granularities, from structured to unstruct
 
 ### Pruning Convolutional Layers 
 Recap:
+
 ![alt text](Images/image-21.png)
 - We have 4 dimesions to prune/can be pruned.
 
 Spectrum of pruning
+
 ![alt text](Images/image-22.png)
 - From completely random (left) to following a strict pattern (right).
 
 #### Fine-grained Pruning
+
 1. More flexible
-![alt text](Images/image-23.png)
+- ![alt text](Images/image-23.png)
 
 2. Larger compression ratio
-![alt text](Images/image-24.png)
+- ![alt text](Images/image-24.png)
 
 3. Can deliver speed up on some custom hardware (e.g. EIE) but not GPU (easily).
 
@@ -94,7 +99,7 @@ Question: What is the pruning pattern for the matrix above?
 
 
 Accuracy results:
-![alt text](Images/image-26.png)
+- ![alt text](Images/image-26.png)
 
 #### Channel Pruning
 The most popular method. We can get very dense matrix, which is easy to accelerate. The downside is the pruning ratio would be lower. This is the most common techniques for mobile chip companies.
@@ -121,9 +126,10 @@ Element wise pruning:
 - This is fine-grained pruning
 
 Row wise pruning:
-![alt text](Images/image-33.png)
+- ![alt text](Images/image-33.png)
+
 OR with L2-norm:
-![alt text](Images/image-34.png)
+- ![alt text](image.png)
 - This is similar to vector based pruning
 
 Note: These simple techniques have been used in industry successfully. Sometimes easier techniques will make it into products instead of complex ones.
@@ -160,7 +166,7 @@ Minimizing the error before and after pruning. The Matmul should be close before
 Problem formulation to minimize the reconstruction error.
 ![alt text](Images/image-47.png)
 - Finds the channel which gives the least error after prune.
-- When Beta is 1, it means that channel is pruned.
+- When Beta is 0, it means that channel is pruned.
 - Beta is learned in step 1. The weights, W is fixed.
 - Weights, W is learned in step 2. Beta is fixed. This means adjusting the weights after pruning.
 - This can be done iteratively.
