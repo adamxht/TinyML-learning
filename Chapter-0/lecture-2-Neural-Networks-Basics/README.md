@@ -231,7 +231,7 @@ MAC = Multiply-Accumulate Operations
 FLOP = Floating-Point Operations (FLOP)
 - A multiply is a floating point operation
 - An add is a floating point operationn
-- One multiply-accumulate operation is TWO GLOP
+- One multiply-accumulate operation is TWO FLOP
   - Example: AlexNet has 724M MACs, total number of FLOP will be 1.4G FLOPs
 - Floating Point Operation Per SEcond (FLOPS)
   - FLOPS = FLOPs / second
